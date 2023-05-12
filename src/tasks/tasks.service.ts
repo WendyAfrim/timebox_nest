@@ -9,13 +9,11 @@ export class TasksService {
 
   constructor(private prisma: PrismaService) {}
 
-  // async create(createTaskDto: CreateTaskDto) {
-  //   return this.prisma.task.create({ data: createTaskDto});
-  // }
-
-    async create(data: CreateTaskDto) {
-      return `This action returns all tasks`;
+  async create(createTaskDto: CreateTaskDto) {
+  
+    return this.prisma.task.create({ data: createTaskDto});
   }
+
 
   findAll() {
     return `This action returns all tasks`;

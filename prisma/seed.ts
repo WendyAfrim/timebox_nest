@@ -25,7 +25,7 @@ async function main() {
         state: 'NOT_ASSIGNED',
         createdBy: 'Julie',
         priority: 'HIGH',
-        timebox: { connect : { id : 3}},
+        timebox: { connect : { id : 1}},
         timeboxslot: { connect : { id : 1}},
       }
     })

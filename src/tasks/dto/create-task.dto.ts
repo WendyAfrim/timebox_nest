@@ -1,13 +1,13 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { Timebox, Timeslot } from "@prisma/client";
-import { CreateTimeboxDto } from "src/timeboxs/dto/create-timebox.dto";
-import { CreateTimeslotDto } from "src/timeslots/dto/create-timeslot.dto";
+import { CreateTimeboxDto } from "src/timeboxs/dto/create-timebox.dto"; 
+
 
 export class CreateTaskDto {
     @ApiProperty()
     title: string;
+    timeslot: null;
+    @ApiProperty({ type: () => CreateTimeboxDto })
+    timebox: null;
     @ApiProperty()
-    timeslot: CreateTimeslotDto;
-    @ApiProperty()
-    timebox: CreateTimeboxDto
+    createdBy: string;
 }
